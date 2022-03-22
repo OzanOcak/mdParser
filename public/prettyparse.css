@@ -1,0 +1,127 @@
+@media print {
+  header,
+  #input,
+  #output > label {
+    display: none;
+  }
+}
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+  border: 2px solid black;
+}
+.flex-child:first-child,
+.flex-child:last-child {
+  margin-right: auto;
+  margin-left: auto;
+  width: 43%;
+}
+
+body {
+  background-color: lightgray;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+#output h1 {
+  border-bottom: 2px outset rgb(252, 248, 248);
+}
+#output h2 {
+  border-bottom: 1px outset rgb(252, 248, 248);
+}
+
+/*
+b::after {
+  content: "   **";
+}
+*/
+textarea[name="source"],
+pp-output {
+  min-height: 50em;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+#text::before {
+  content: "<p>";
+}
+#text::after {
+  content: "</p>";
+}
+
+pp-output {
+  display: block;
+  font-family: monospace;
+  white-space: pre-wrap;
+  background-color: white;
+  color: #090a0a;
+  border: 1px solid black;
+}
+
+pp-comment {
+  color: #888;
+}
+
+pp-comment::before {
+  content: "<!--";
+}
+
+pp-comment::after {
+  content: "-->";
+}
+
+pp-opentag::before {
+  content: "<";
+}
+
+pp-closetag::before {
+  content: "</";
+}
+
+pp-opentag::after,
+pp-closetag::after {
+  content: ">";
+}
+
+pp-opentag.empty::after {
+  content: "/>";
+}
+
+pp-tagname {
+  color: #0c98ea;
+}
+
+pp-attrname {
+  color: #ca6836;
+}
+
+pp-attribute::before {
+  content: " ";
+}
+
+pp-attrvalue::before {
+  content: '="';
+}
+
+pp-attrvalue::after {
+  content: '"';
+}
+
+pp-text {
+  color: #000;
+}

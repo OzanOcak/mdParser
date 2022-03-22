@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>HTML Pretty Printer</title>
+    <meta name="description" content="HTML Pretty Printer" />
+    <meta name="author" content="Scott Means for LinkedIn Learning" />
+
+    <link rel="stylesheet" type="text/css" href="prettyparse.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Minimalist Markdown Editor</h1>
+    </header>
+    <main class="flex-container">
+      <section id="input" class="flex-child">
+        <label>Markdown Text</label>
+        <textarea name="source">
+#Imperial Trans-Antarctic Expedition
+The Imperial Trans-Antarctic expedition of 1914–1917 is considered to be the last major expedition of the Heroic Age of Antarctic Exploration. Conceived by Sir Ernest Shackleton, the expedition was an attempt to make the first land crossing of the Antarctic continent. After Roald Amundsen's South Pole expedition in 1911, this crossing remained, in Shackleton's words, the "one great main object of Antarctic journeyings".[1] Shackleton's expedition failed to accomplish this objective, but became recognized instead as an epic feat of endurance.
+####This is second paragraph:
+Shackleton had served in the Antarctic on the Discovery expedition of 1901–1904, and had led the Nimrod expedition of 1907–1909. In this new venture he proposed to sail to the Weddell Sea and to land a shore party near Vahsel Bay, in preparation for a transcontinental march via the South Pole to the Ross Sea. A supporting group, the Ross Sea party, would meanwhile establish camp in McMurdo Sound, and from there lay a series of supply depots across the Ross Ice Shelf to the foot of the Beardmore Glacier. These depots would be essential for the transcontinental party's survival, as the group would not be able to carry enough provisions for the entire crossing. The expedition required two ships: Endurance under Shackleton for the Weddell Sea party, and Aurora, under Aeneas Mackintosh, for the Ross Sea party.
+        </textarea>
+      </section>
+      <section id="output" class="flex-child">
+        <label>HTML Output</label>
+        <pp-output name="output" id="html-output"> </pp-output>
+      </section>
+    </main>
+    <script type="module" defer src="prettyparse.js"></script>
+  </body>
+</html>
