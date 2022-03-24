@@ -6,7 +6,7 @@ I initially aimed to develop a markup to html parser with minimalist lexer analy
 
 createDocumentFragment method is used to handling dom manipulation. I disregard performance and security. There are only some of mark up grammar implemented so far.
 
-![](screenshot.png =100x20)
+![](./screenshot.png)
 
 To run the project
 `npm run dev`
