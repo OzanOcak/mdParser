@@ -171,6 +171,8 @@ function markdParse(html) {
         elementAppend(lineGrammar.BACKTICK3);
       } else if (lexer.elementMatched(lineGrammar.BACKTICK.markdownElement)) {
         elementAppend(lineGrammar.BACKTICK); //`s?.*s?`;
+      } else if (lexer.elementMatched(lineGrammar.BLOCKQUOTE.markdownElement)) {
+        elementAppend(lineGrammar.BLOCKQUOTE);
       } /*else if (lexer.elementMatched(lineGrammar.Bold.markdownElement)) {
         text += lexer.read();
       } */ else {

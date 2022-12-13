@@ -1,7 +1,7 @@
 const lineGrammar = {
   H1: {
     htmlTag: "h1",
-    tillRead: /$/m,
+    tillRead: /\n$/m,
     markdownElement: "#",
   },
   H2: {
@@ -41,8 +41,8 @@ const lineGrammar = {
   },
   BLOCKQUOTE: {
     htmlTag: "blockquote",
-    tillRead: /\*\*$/m,
-    markdownElement: /^>/,
+    tillRead: /\*{3}$/m,
+    markdownElement: /(\^*{3})/,
   },
   TD: {
     htmlTag: "table",
